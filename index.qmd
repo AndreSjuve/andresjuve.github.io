@@ -1,11 +1,48 @@
 ---
-title: "andresjuve.github.io"
+title: "André Wattø Sjuve"
+pagetitle: "André Wattø Sjuve"
+subtitle: ""
+image: assets/images/headshot.jpg
+
+about:
+  template: solana
+  image-width: 24em
+  image-shape: round
+  id: hero-heading
+  links:
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: https://no.linkedin.com/in/andréwattøsjuve/
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/AndreSjuve/
+    - text: "Email"
+      aria-label: Email
+      href: mailto:andre.sjuve@nhh.no
+    - text: "SSRN"
+      href: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4172820
+      aria-label: "Logo linking to andresjuve SSRN account"
+page-layout: full
+
+execute: 
+  freeze: false
+  echo: false
+  warning: false
+
+header-includes: >
+  <link rel="stylesheet" href="assets/index.css">
+resources:
+  - assets/index.css
 ---
 
-This is a Quarto website.
+<br><br>
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
-```
+::: {#hero-heading}
+
+I am an assistant professor at the department of [Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.
+
+
+:::
+<!-- hero-heading -->
+

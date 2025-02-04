@@ -1,16 +1,37 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "andresjuve.github.io",
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Solo-authored, (2022) SSRN\n\n\n\nTrond Døskeland, Xuan Li, André Wattø Sjuve and Andreas Ørpetveit"
+  },
+  {
+    "objectID": "research/index.html#manuscripts-being-prepared",
+    "href": "research/index.html#manuscripts-being-prepared",
+    "title": "Research",
+    "section": "",
+    "text": "Solo-authored, (2022) SSRN\n\n\n\nTrond Døskeland, Xuan Li, André Wattø Sjuve and Andreas Ørpetveit"
+  },
+  {
+    "objectID": "research/index.html#published-forthcoming-papers",
+    "href": "research/index.html#published-forthcoming-papers",
+    "title": "Research",
+    "section": "Published & Forthcoming Papers",
+    "text": "Published & Forthcoming Papers\n\nForced to Be Active: Evidence From a Regulation Intervention\nPetter Bjerksund, Trond Døskeland, André Wattø Sjuve and Andreas Ørpetveit, (2022) SSRN\nManagement Science (forthcoming)\nAbstract: Mutual funds known as closet indexers are marketed as active, but actually operate as low-activity funds. Investors end up paying for full service, but only receiving a part of it. Supervisory authorities around the world are considering ways to regulate these funds. In this context, we examine the impact of regulatory interventions by Scandinavian regulators. We compare the scrutinized Scandinavian funds with similar unaffected European funds. The findings suggest that the regulated Scandinavian funds preferred increased activity over fee reduction. Consequently, fund managers adopted more active management strategies, resulting in a significant 2% decrease in annual alpha. Therefore, the regulatory interventions resulted in unfavorable outcomes for investors.\n\n\nDo Fees Matter? Investor’s Sensitivity to Active Management Fees\nTrond Døskeland, André Wattø Sjuve and Andreas Ørpetveit, (2022) SSRN\nJournal of Empirical Finance (forthcoming)\nAbstract: Following the framework established by Berk and Green (2004), mutual fund inflows and fees should be uncorrelated at equilibrium. We empirically explore this relationship by investigating the temporal changes in fund fees and flows. Our fee metrics focus on active management services rather than diversification. We analyze the additional fee compared to passive alternatives and additional fee per unit of active management, along with the traditionally used total fee. Our analysis of global data reveals a negative time series correlation between both measures of active management fee and fund flows."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "André Wattø Sjuve",
+    "section": "",
+    "text": "Email\n  \n  \n     SSRN\n  \n\n      \nI am an assistant professor at the department of Business and Management Science at NHH Norwegian School of Economics.\n\n    \n    \n  \n\n\n\n\n\n\n\n Back to top"
   }
 ]

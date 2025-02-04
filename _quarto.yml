@@ -3,18 +3,48 @@ project:
   output-dir: docs
 
 website:
-  title: "andresjuve.github.io"
+  title: "André Wattø Sjuve"
+  site-url: https://andresjuve.com
+  description: "Assistant professor @NHH"
+  favicon: assets/images/headshot.jpg
+  page-navigation: true
+  back-to-top-navigation: true
+ 
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    #logo: assets/images/aws_logo.svg
+    tools:
+    - icon: github
+      href: https://github.com/AndreSjuve/
+    right:
+      - text: Home
+        aria-label: "Home"
+        href: index.qmd
+      - text: Research
+        aria-label: "Research"
+        href: research/index.qmd
+      - text: CV
+        aria-label: "CV"
+        href: assets/Andre_W_Sjuve.pdf
+  
+  page-footer:  
+    center:  >-
+     &#169; 2025 André Wattø Sjuve
 
-format:
+format: 
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+    theme:
+      light:
+        - cosmo
+        - assets/aws-theme-light.scss
+      dark: 
+        - cosmo
+        - assets/aws-theme-dark.scss
+    highlight-style:
+      light: github-light
+      dark: github-dark
+    code-link: true
+    pagetitle: "{{< meta title >}}"
+    lightbox: true
 
-editor: visual
-
+execute: 
+  freeze: auto
