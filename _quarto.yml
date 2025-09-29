@@ -9,7 +9,7 @@ website:
   favicon: assets/images/headshot.jpg
   page-navigation: true
   back-to-top-navigation: true
- 
+
   navbar:
     #logo: assets/images/aws_logo.svg
     tools:
@@ -25,18 +25,18 @@ website:
       - text: CV
         aria-label: "CV"
         href: assets/Andre_W_Sjuve.pdf
-  
-  page-footer:  
+
+  page-footer:
     center:  >-
      &#169; 2025 André Wattø Sjuve
 
-format: 
+format:
   html:
     theme:
       light:
         - cosmo
         - assets/aws-theme-light.scss
-      dark: 
+      dark:
         - cosmo
         - assets/aws-theme-dark.scss
     highlight-style:
@@ -46,5 +46,7 @@ format:
     pagetitle: "{{< meta title >}}"
     lightbox: true
 
-execute: 
+    includes:
+      after-body: assets/theme-persister.js
+execute:
   freeze: auto
