@@ -24,7 +24,7 @@ about:
       aria-label: "Logo linking to andresjuve SSRN account"
 page-layout: full
 
-execute: 
+execute:
   freeze: false
   echo: false
   warning: false
@@ -40,9 +40,8 @@ resources:
 
 ::: {#hero-heading}
 
-I am an assistant professor at the department of [Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.
+I am an associate professor at the department of [Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.
 
 
 :::
 <!-- hero-heading -->
-
