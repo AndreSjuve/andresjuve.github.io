@@ -9,3 +9,5 @@
 .superpowers/
 
 **/*.quarto_ipynb
+
+.playwright-mcp/
