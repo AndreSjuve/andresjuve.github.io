@@ -174,7 +174,7 @@ main.content {
 //  6.2 Page title — the hero's second variant. Same grid, left column empty,
 //  so every page opens on the same left edge as the home page's name.
 // ===========================================================================
-main.content #title-block-header {
+main.content #title-block-header:has(h1.title) {
   display: grid;
   gap: var(--sp-3);
   padding-bottom: var(--sp-4);
@@ -183,11 +183,11 @@ main.content #title-block-header {
 }
 
 @media (min-width: 720px) {
-  main.content #title-block-header {
+  main.content #title-block-header:has(h1.title) {
     grid-template-columns: var(--col-meta) minmax(0, 1fr);
     gap: 0 var(--gutter);
   }
-  main.content #title-block-header > * { grid-column: 2; }
+  main.content #title-block-header:has(h1.title) > * { grid-column: 2; }
 }
 
 main.content #title-block-header h1.title {
