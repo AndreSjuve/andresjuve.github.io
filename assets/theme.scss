@@ -237,16 +237,21 @@ main.content #title-block-header h1.title {
 }
 
 .hero-meta {
+  display: grid;
+  gap: var(--sp-2);
+  align-content: start;
   font-family: var(--sans);
   font-size: var(--fs-meta);
   font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--muted);
-  line-height: 1.85;
-  padding-top: 0.5rem;
+  line-height: 1.6;          // spec §4 for --fs-meta
+  padding-top: var(--sp-2);  // was a literal 0.5rem
   margin: 0;
 }
+
+.hero-meta p { margin: 0; }
 
 .hero-name {
   font-family: var(--serif);

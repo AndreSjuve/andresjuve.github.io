@@ -5,9 +5,11 @@ toc: false
 
 ::: {.hero}
 ::: {.hero-meta}
-Associate\
-Professor\
-NHH · Bergen
+Associate Professor
+
+NHH
+
+Bergen
 :::
 
 ::: {}
