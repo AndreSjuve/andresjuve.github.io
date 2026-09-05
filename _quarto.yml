@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "A.W. Sjuve"
+  title: "André Wattø Sjuve"
   site-url: https://andresjuve.com
   description: "Assistant professor @NHH"
   favicon: assets/images/headshot.jpg
