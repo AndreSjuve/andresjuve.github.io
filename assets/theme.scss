@@ -451,7 +451,6 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
   list-style: none;
   padding: 0;
   margin: var(--sp-3) 0 0;
-  max-width: var(--measure);
 }
 
 .past-teaching li {
@@ -474,4 +473,13 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
   color: var(--muted);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+
+// Blocks that belong to the content column but are not entries: they take the
+// same left edge as the page title and every entry title, so each page has one.
+@media (min-width: 720px) {
+  .page-lead,
+  .past-teaching {
+    margin-left: calc(var(--col-meta) + var(--gutter));
+  }
 }
