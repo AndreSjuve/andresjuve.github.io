@@ -134,7 +134,7 @@ body {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 500;
-  font-size: 1.02rem;
+  font-size: var(--fs-body);
   letter-spacing: 0;
   color: var(--ink);
 }
@@ -171,18 +171,33 @@ main.content {
 }
 
 // ===========================================================================
-//  6.2 Page title (the hero's second variant; hero itself is Task 3)
+//  6.2 Page title — the hero's second variant. Same grid, left column empty,
+//  so every page opens on the same left edge as the home page's name.
 // ===========================================================================
-main.content > h1 {
+main.content #title-block-header {
+  display: grid;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-4);
+  margin-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 720px) {
+  main.content #title-block-header {
+    grid-template-columns: var(--col-meta) minmax(0, 1fr);
+    gap: 0 var(--gutter);
+  }
+  main.content #title-block-header > * { grid-column: 2; }
+}
+
+main.content #title-block-header h1.title {
   font-family: var(--serif);
   font-weight: 400;
   font-size: var(--fs-page-title);
   line-height: 1.06;
   letter-spacing: -0.018em;
   color: var(--ink);
-  margin: 0 0 var(--sp-4);
-  padding-bottom: var(--sp-4);
-  border-bottom: 1px solid var(--rule);
+  margin: 0;
 }
 
 // An orienting sentence directly under a page title.
@@ -190,7 +205,7 @@ main.content > h1 {
   font-size: var(--fs-lead);
   max-width: var(--measure);
   color: var(--body);
-  margin: calc(var(--sp-4) * -1 + var(--sp-2)) 0 var(--sp-4);
+  margin: 0 0 var(--sp-4);
 }
 
 // ===========================================================================
