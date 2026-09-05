@@ -446,15 +446,13 @@ main.content p a:not(.paper-link) {
 }
 main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
 
-// Earlier teaching — a condensed index, deliberately subordinate to the
-// current courses above it. Two columns at desktop so ten rows read as a
-// compact block rather than competing with the two entries above.
+// Earlier teaching — a condensed index, deliberately subordinate to the current
+// courses above. Multi-column rather than grid: it balances any number of items,
+// so adding an eleventh course needs no CSS change.
 .past-teaching {
   list-style: none;
   padding: 0;
   margin: var(--sp-3) 0 0;
-  display: grid;
-  gap: 0 var(--gutter);
 }
 
 .past-teaching li {
@@ -465,6 +463,7 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
   border-bottom: 1px solid var(--rule);
   font-size: var(--fs-sub);
   color: var(--body);
+  break-inside: avoid; // never split a row across the column break
 }
 
 .past-teaching li:last-child { border-bottom: 0; }
@@ -487,21 +486,17 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
     margin-left: calc(var(--col-meta) + var(--gutter));
   }
 
-  // Column-major flow: item 1 leads column 1 top-to-bottom, item 6 leads
-  // column 2, so ten rows read in two natural top-down passes instead of
-  // one tall one. Row count is tied to the current 10-item list (2 cols
-  // -> 5 rows each) — update to repeat(ceil(N/2), auto) if the list grows.
+  // Multi-column balances however many rows exist across two columns without
+  // needing a hardcoded row count — the browser recalculates the split any
+  // time the list changes length.
   .past-teaching {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(5, auto);
+    columns: 2;
+    column-gap: var(--gutter);
   }
 
-  // Column-major flow makes item 5 (bottom of column 1) column-final too,
-  // not only item 10 (the DOM-last item, bottom of column 2). CSS has no
-  // selector for "last item of a column" that stays correct as the list
-  // length changes, so rather than leave column 1 with a dangling rule and
-  // column 2 without one, keep the hairline on every row at this
-  // breakpoint — consistent beats partially right.
+  // With multi-column, CSS truly cannot express "last item per column" — the
+  // browser decides where the break falls, and that decision can change with
+  // content or viewport. Keep the hairline on every row here rather than
+  // leave one column with a dangling rule and the other without one.
   .past-teaching li:last-child { border-bottom: 1px solid var(--rule); }
 }
