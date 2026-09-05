@@ -18,3 +18,48 @@ Bergen
 [I study asset management — what active managers actually deliver, what investors pay for it, and how regulation changes both. I am at the [Department of Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.]{.hero-lead}
 :::
 :::
+
+::: {.sect}
+## Selected work
+
+[Three of five]{.sect-tag}
+:::
+
+::: {.entry}
+[[Management Science]{.entry-org}September 2025]{.entry-meta}
+
+[Forced to Be Active: Evidence From a Regulation Intervention]{.entry-title}
+
+[with Petter Bjerksund, Trond Døskeland and Andreas Ørpetveit]{.entry-sub}
+
+::: {.entry-links}
+[Publisher](https://doi.org/10.1287/mnsc.2023.03124){.paper-link}
+[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3635718){.paper-link}
+:::
+:::
+
+::: {.entry}
+[[Journal of Portfolio Management]{.entry-org}Forthcoming]{.entry-meta}
+
+[Where Active Management Adds Value for a Large Asset Owner]{.entry-title}
+
+[with Trond Døskeland]{.entry-sub}
+:::
+
+::: {.entry}
+[[Journal of Empirical Finance]{.entry-org}March 2025]{.entry-meta}
+
+[Do Fees Matter? Investor's Sensitivity to Active Management Fees]{.entry-title}
+
+[with Trond Døskeland and Andreas Ørpetveit]{.entry-sub}
+
+::: {.entry-links}
+[Publisher](https://doi.org/10.1016/j.jempfin.2025.101596){.paper-link}
+[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3857628){.paper-link}
+:::
+:::
+
+::: {.entry-links}
+[All research](research/index.qmd){.paper-link}
+[Curriculum vitae](assets/Andre_W_Sjuve.pdf){.paper-link}
+:::
