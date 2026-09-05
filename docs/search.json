@@ -1,37 +1,79 @@
 [
   {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Courses I currently teach at NHH, and what they are actually about."
+  },
+  {
+    "objectID": "teaching/index.html#current-courses",
+    "href": "teaching/index.html#current-courses",
+    "title": "Teaching",
+    "section": "Current courses",
+    "text": "Current courses\nNHH"
+  },
+  {
+    "objectID": "teaching/index.html#earlier-teaching",
+    "href": "teaching/index.html#earlier-teaching",
+    "title": "Teaching",
+    "section": "Earlier teaching",
+    "text": "Earlier teaching\nAssistantships"
+  },
+  {
+    "objectID": "practice/index.html",
+    "href": "practice/index.html",
+    "title": "Practice",
+    "section": "",
+    "text": "Work for public bodies, asset owners and the profession, alongside the academic research."
+  },
+  {
+    "objectID": "practice/index.html#appointments-advisory",
+    "href": "practice/index.html#appointments-advisory",
+    "title": "Practice",
+    "section": "Appointments & advisory",
+    "text": "Appointments & advisory\nSelected"
+  },
+  {
+    "objectID": "practice/index.html#reports",
+    "href": "practice/index.html#reports",
+    "title": "Practice",
+    "section": "Reports",
+    "text": "Reports\nPublic & industry"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "André Wattø Sjuve",
+    "section": "",
+    "text": "Associate Professor\nNHH\nBergen\n\n\nAndré Wattø Sjuve\nI study asset management — what active managers actually deliver, what investors pay for it, and how regulation changes both. I am at the Department of Business and Management Science at NHH Norwegian School of Economics."
+  },
+  {
+    "objectID": "index.html#selected-work",
+    "href": "index.html#selected-work",
+    "title": "André Wattø Sjuve",
+    "section": "Selected work",
+    "text": "Selected work\nThree of five"
+  },
+  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
     "section": "",
-    "text": "Under review\n\n\nSSRN\n\n\n\n\nwith Trond Døskeland, Xuan Li, and Andreas Ørpetveit"
+    "text": "Peer reviewed"
+  },
+  {
+    "objectID": "research/index.html#published-forthcoming",
+    "href": "research/index.html#published-forthcoming",
+    "title": "Research",
+    "section": "",
+    "text": "Peer reviewed"
   },
   {
     "objectID": "research/index.html#manuscripts-being-prepared",
     "href": "research/index.html#manuscripts-being-prepared",
     "title": "Research",
-    "section": "",
-    "text": "Under review\n\n\nSSRN\n\n\n\n\nwith Trond Døskeland, Xuan Li, and Andreas Ørpetveit"
-  },
-  {
-    "objectID": "research/index.html#published-forthcoming-papers",
-    "href": "research/index.html#published-forthcoming-papers",
-    "title": "Research",
-    "section": "Published & Forthcoming Papers",
-    "text": "Published & Forthcoming Papers\n\nJournal of Portfolio Management · Forthcoming\n\nWhere Active Management Adds Value for a Large Asset Owner\nwith Trond Døskeland\n\n\nShow abstract\n\n\nWe study how one large benchmarked asset owner allocated scarce active-risk budget across active functions, using evidence from Norway’s sovereign wealth fund. Using fund-level data from 1998 through 2025 and strategy-level evidence from 2013 through 2025, we find that the most consistent gains came from implementation-oriented activities that scaled well across a very large portfolio. Equity security selection also added value, though less uniformly. Discretionary allocation, by contrast, reduced benchmark-relative returns on average. Although Norway’s fund is institutionally distinctive, the evidence suggests that where investors share similar benchmark governance, scale, and implementation capacity, the strongest case for active management may lie in repeatable implementation advantages and selected forms of specialized security selection.\n\n\n\n\n\nManagement Science · September 2025\n\nForced to Be Active: Evidence From a Regulation Intervention\nwith Petter Bjerksund, Trond Døskeland, and Andreas Ørpetveit\nPublisher link SSRN\n\n\nShow abstract\n\n\nMutual funds known as closet indexers are marketed as active, but actually operate as low-activity funds. Investors end up paying for full service, but only receiving a part of it. Supervisory authorities around the world are considering ways to regulate these funds. In this context, we examine the impact of regulatory interventions by Scandinavian regulators. We compare the scrutinized Scandinavian funds with similar unaffected European funds. The findings suggest that the regulated Scandinavian funds preferred increased activity over fee reduction. Consequently, fund managers adopted more active management strategies, resulting in a significant 2% decrease in annual alpha. Therefore, the regulatory interventions resulted in unfavorable outcomes for investors.\n\n\n\n\n\nJournal of Empirical Finance · March 2025\n\nDo Fees Matter? Investor’s Sensitivity to Active Management Fees\nwith Trond Døskeland, and Andreas Ørpetveit\nPublisher link SSRN\n\n\nShow abstract\n\n\nFollowing the framework established by Berk and Green (2004), mutual fund inflows and fees should be uncorrelated at equilibrium. We empirically explore this relationship by investigating the temporal changes in fund fees and flows. Our fee metrics focus on active management services rather than diversification. We analyze the additional fee compared to passive alternatives and additional fee per unit of active management, along with the traditionally used total fee. Our analysis of global data reveals a negative time series correlation between both measures of active management fee and fund flows."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "A.W. Sjuve",
-    "section": "",
-    "text": "Associate Professor · NHH\n\nAndréWattø Sjuve\n\n\n   SSRN\n\n\n\n\n\nI am an associate professor at the department of Business and Management Science at NHH Norwegian School of Economics. My primary interest is in asset management.\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "research/index.html#other-writings",
-    "href": "research/index.html#other-writings",
-    "title": "Research",
-    "section": "Other writings",
-    "text": "Other writings\n\nGovernment report · December 2025\n\nEvaluating the Performance of Active Management in Norway’s Sovereign Wealth Fund (GPFG)\nwith Trond Døskeland\nSSRN\n\n\nShow abstract\n\n\nThis report concludes that Norges Bank’s active management of the Fund has created substantial value for the Norwegian people. Since 1998, active decisions have contributed about 611 billion NOK before costs, and 402 billion NOK after costs. This corresponds to average annual active returns of 0.27% before costs, and 0.19% after costs. In the most recent four year period, active management has continued to add value, with mean annual gross and net active returns of 0.24% and 0.20%. These results reflect very low management costs of about 0.04% per year.\n\n\n\n\n\nIndustry report · November 2023\n\nReturn on pension assets\nwith Andreas Ørpetveit\nPublisher link"
+    "section": "Manuscripts being prepared",
+    "text": "Manuscripts being prepared\nWorking papers"
   }
 ]

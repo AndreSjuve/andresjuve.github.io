@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://andresjuve.com/research/index.html</loc>
-    <lastmod>2026-06-13T10:11:56.534Z</lastmod>
+    <loc>https://andresjuve.com/teaching/index.html</loc>
+    <lastmod>2026-09-05T11:01:58.397Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andresjuve.com/practice/index.html</loc>
+    <lastmod>2026-09-05T11:00:59.374Z</lastmod>
   </url>
   <url>
     <loc>https://andresjuve.com/index.html</loc>
-    <lastmod>2026-06-13T10:13:33.593Z</lastmod>
+    <lastmod>2026-09-05T11:03:00.317Z</lastmod>
+  </url>
+  <url>
+    <loc>https://andresjuve.com/research/index.html</loc>
+    <lastmod>2026-09-05T10:29:06.976Z</lastmod>
   </url>
 </urlset>
