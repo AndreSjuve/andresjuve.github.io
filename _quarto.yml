@@ -31,9 +31,7 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - assets/theme.scss
+    theme: assets/theme.scss
     highlight-style: github
     pagetitle: "{{< meta title >}}"
     lightbox: true

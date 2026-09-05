@@ -107,3 +107,94 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+// ===========================================================================
+//  6.1 Navbar
+// ===========================================================================
+.navbar {
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
+  padding-top: var(--sp-3);
+  padding-bottom: var(--sp-2);
+}
+
+.navbar > .container-fluid,
+.navbar > .container {
+  max-width: var(--page-max);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.02rem;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.navbar-nav .nav-link {
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  padding-bottom: 2px !important;
+  margin: 0 0 0 var(--sp-3);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link[aria-current="page"],
+.navbar-nav .nav-link.active {
+  color: var(--navy) !important;
+  border-bottom-color: var(--navy);
+}
+
+.navbar .quarto-navbar-tools .nav-link { color: var(--muted) !important; }
+
+// ===========================================================================
+//  Page container — one measure for the whole site
+// ===========================================================================
+main.content {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-top: var(--sp-6);
+  padding-bottom: var(--sp-6);
+}
+
+// ===========================================================================
+//  6.2 Page title (the hero's second variant; hero itself is Task 3)
+// ===========================================================================
+main.content > h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--fs-page-title);
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0 0 var(--sp-4);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+// An orienting sentence directly under a page title.
+.page-lead {
+  font-size: var(--fs-lead);
+  max-width: var(--measure);
+  color: var(--body);
+  margin: calc(var(--sp-4) * -1 + var(--sp-2)) 0 var(--sp-4);
+}
+
+// ===========================================================================
+//  Footer
+// ===========================================================================
+.nav-footer {
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--muted);
+  font-size: var(--fs-sub);
+}
+.nav-footer a { color: var(--muted); }
