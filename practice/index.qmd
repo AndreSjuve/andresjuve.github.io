@@ -1,9 +1,8 @@
 ---
 title: "Practice"
+subtitle: "Work for public bodies, asset owners and the profession, alongside the academic research."
 toc: false
 ---
-
-[Work for public bodies, asset owners and the profession, alongside the academic research.]{.page-lead}
 
 ::: {.sect}
 ## Appointments & advisory
@@ -54,7 +53,7 @@ toc: false
 ::: {.sect}
 ## Reports
 
-[Public &amp; industry]{.sect-tag}
+[Public & industry]{.sect-tag}
 :::
 
 ::: {.entry}

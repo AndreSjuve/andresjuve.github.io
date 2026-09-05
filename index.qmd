@@ -13,7 +13,7 @@ Bergen
 :::
 
 ::: {}
-[André Wattø Sjuve]{.hero-name}
+# André Wattø Sjuve {.hero-name}
 
 [I study asset management — what active managers actually deliver, what investors pay for it, and how regulation changes both. I am at the [Department of Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.]{.hero-lead}
 :::
@@ -23,6 +23,14 @@ Bergen
 ## Selected work
 
 [Three of five]{.sect-tag}
+:::
+
+::: {.entry}
+[[Journal of Portfolio Management]{.entry-org}Forthcoming]{.entry-meta}
+
+[Where Active Management Adds Value for a Large Asset Owner]{.entry-title}
+
+[with Trond Døskeland]{.entry-sub}
 :::
 
 ::: {.entry}
@@ -36,14 +44,6 @@ Bergen
 [Publisher](https://doi.org/10.1287/mnsc.2023.03124){.paper-link}
 [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3635718){.paper-link}
 :::
-:::
-
-::: {.entry}
-[[Journal of Portfolio Management]{.entry-org}Forthcoming]{.entry-meta}
-
-[Where Active Management Adds Value for a Large Asset Owner]{.entry-title}
-
-[with Trond Døskeland]{.entry-sub}
 :::
 
 ::: {.entry}

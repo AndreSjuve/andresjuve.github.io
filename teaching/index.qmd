@@ -1,9 +1,8 @@
 ---
 title: "Teaching"
+subtitle: "Courses I currently teach at NHH, and what they are actually about."
 toc: false
 ---
-
-[Courses I currently teach at NHH, and what they are actually about.]{.page-lead}
 
 ::: {.sect}
 ## Current courses

@@ -89,6 +89,10 @@ $border-radius-xl: 0;
   --col-meta: 9rem;
   --gutter:   2.75rem;
   --page-max: 46rem;
+  --indent:   calc(var(--col-meta) + var(--gutter));
+
+  --track-label: 0.13em;   // nav, section tags, link buttons, disclosures
+  --track-meta:  0.09em;   // metadata column
 }
 
 body {
@@ -153,7 +157,7 @@ body {
   font-family: var(--sans);
   font-size: var(--fs-label);
   font-weight: 500;
-  letter-spacing: 0.13em;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--muted) !important;
   padding-bottom: 2px !important;
@@ -168,13 +172,12 @@ body {
   border-bottom-color: var(--navy);
 }
 
-.navbar .quarto-navbar-tools .nav-link { color: var(--muted) !important; }
-
 // ===========================================================================
 //  Page container — one measure for the whole site
 // ===========================================================================
 main.content {
   max-width: var(--page-max);
+  width: 100%;
   margin-inline: auto;
   padding-top: var(--sp-6);
   padding-bottom: var(--sp-6);
@@ -200,6 +203,15 @@ main.content #title-block-header:has(h1.title) {
   main.content #title-block-header:has(h1.title) > * { grid-column: 2; }
 }
 
+// `:empty` doesn't match here — Quarto's template leaves whitespace text
+// nodes inside this div even when it has no rendered content, and CSS
+// `:empty` counts whitespace text nodes as children. Check for element
+// children instead. `:has()`/`:not()` take the specificity of their
+// argument (here just `*`, contributing 0), not a flat pseudo-class, so the
+// selector has to repeat Quarto's own `.quarto-title-block.default`
+// qualifiers to outrank its compiled `.quarto-title-meta{display:grid}` rule.
+main.content #title-block-header.quarto-title-block.default .quarto-title-meta:not(:has(*)) { display: none; }
+
 main.content #title-block-header h1.title {
   font-family: var(--serif);
   font-weight: 400;
@@ -210,12 +222,14 @@ main.content #title-block-header h1.title {
   margin: 0;
 }
 
-// An orienting sentence directly under a page title.
-.page-lead {
+// An orienting sentence directly under a page title. Quarto renders front-matter
+// `subtitle:` as <p class="subtitle"> inside #title-block-header, so it inherits
+// the title block's grid placement (col 2) and sits above the rule for free.
+main.content #title-block-header .subtitle {
   font-size: var(--fs-lead);
   max-width: var(--measure);
   color: var(--body);
-  margin: 0 0 var(--sp-4);
+  margin: 0;
 }
 
 // ===========================================================================
@@ -253,7 +267,7 @@ main.content #title-block-header h1.title {
   font-family: var(--sans);
   font-size: var(--fs-meta);
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: var(--track-meta);
   text-transform: uppercase;
   color: var(--muted);
   line-height: 1.6;          // spec §4 for --fs-meta
@@ -281,8 +295,7 @@ main.content #title-block-header h1.title {
 }
 
 .hero-name,
-.hero-lead,
-.page-lead { display: block; }
+.hero-lead { display: block; }
 
 // ===========================================================================
 //  6.3 Section head
@@ -313,7 +326,7 @@ main.content h2 {
   font-family: var(--sans);
   font-size: var(--fs-label);
   font-weight: 500;
-  letter-spacing: 0.13em;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--muted);
   white-space: nowrap;
@@ -326,8 +339,13 @@ main.content h2 {
   display: grid;
   gap: var(--sp-1);
   padding: var(--sp-3) 0;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 0;
 }
+
+// Only an entry followed by another entry gets the hairline. This is
+// order-based rather than :last-of-type, which behaves differently depending
+// on what sibling (a link row, a section) happens to follow the last entry.
+.entry:has(+ .entry) { border-bottom: 1px solid var(--rule); }
 
 @media (min-width: 720px) {
   .entry {
@@ -345,13 +363,12 @@ main.content h2 {
   .entry > details.abstract { grid-column: 2; }
 }
 
-.entry:last-of-type { border-bottom: 0; }
-
 .entry-meta {
+  display: block;
   font-family: var(--sans);
   font-size: var(--fs-meta);
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: var(--track-meta);
   text-transform: uppercase;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
@@ -360,7 +377,8 @@ main.content h2 {
   margin: 0;
 }
 
-// The identifying line: journal, course code, or institution.
+// The identifying line: journal, course code, or institution. 0.07em is a
+// documented exception (spec §4) to --track-meta — leave it literal.
 .entry-org {
   display: block;
   font-weight: 600;
@@ -411,7 +429,7 @@ main.content h2 {
   font-family: var(--sans);
   font-size: var(--fs-label);
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--navy);
   text-decoration: none !important;
@@ -431,7 +449,7 @@ details.abstract > summary {
   font-family: var(--sans);
   font-size: var(--fs-label);
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--muted);
   list-style: none;
@@ -482,7 +500,7 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
   font-family: var(--sans);
   font-size: var(--fs-meta);
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: var(--track-meta);
   color: var(--muted);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -491,9 +509,8 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
 // Blocks that belong to the content column but are not entries: they take the
 // same left edge as the page title and every entry title, so each page has one.
 @media (min-width: 720px) {
-  .page-lead,
   .past-teaching {
-    margin-left: calc(var(--col-meta) + var(--gutter));
+    margin-left: var(--indent);
   }
 
   // Multi-column balances however many rows exist across two columns without
