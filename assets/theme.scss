@@ -445,3 +445,33 @@ main.content p a:not(.paper-link) {
   border-bottom: 1px solid var(--navy-line);
 }
 main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
+
+// Condensed list — earlier teaching assistantships, not full entries.
+.past-teaching {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-3) 0 0;
+  max-width: var(--measure);
+}
+
+.past-teaching li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: var(--fs-sub);
+  color: var(--body);
+}
+
+.past-teaching li:last-child { border-bottom: 0; }
+
+.past-teaching span {
+  font-family: var(--sans);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

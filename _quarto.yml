@@ -21,8 +21,14 @@ website:
       - text: Research
         aria-label: "Research"
         href: research/index.qmd
+      - text: Teaching
+        aria-label: "Teaching"
+        href: teaching/index.qmd
+      - text: Practice
+        aria-label: "Practice"
+        href: practice/index.qmd
       - text: CV
-        aria-label: "CV"
+        aria-label: "CV (PDF)"
         href: assets/Andre_W_Sjuve.pdf
 
   page-footer:
