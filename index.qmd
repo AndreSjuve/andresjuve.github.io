@@ -1,33 +1,18 @@
 ---
 pagetitle: "André Wattø Sjuve"
-page-layout: full
 toc: false
-execute:
-  echo: false
-  warning: false
 ---
 
 ::: {.hero}
-
-::: {.hero-text}
-[Associate Professor · NHH]{.hero-role}
-
-::: {.hero-name}
-André<br>Wattø Sjuve
+::: {.hero-meta}
+Associate\
+Professor\
+NHH · Bergen
 :::
 
-::: {.hero-social}
-<a href="https://no.linkedin.com/in/andréwattøsjuve/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-<a href="https://github.com/AndreSjuve/" aria-label="GitHub"><i class="bi bi-github"></i></a>
-<a href="mailto:andre.sjuve@nhh.no" aria-label="Email"><i class="bi bi-envelope"></i></a>
-<a class="hero-social-text" href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4172820" aria-label="SSRN">SSRN</a>
-:::
-:::
+::: {}
+[André Wattø Sjuve]{.hero-name}
 
-<img class="hero-photo" src="assets/images/headshot.jpg" alt="André Wattø Sjuve">
-
+[I study asset management — what active managers actually deliver, what investors pay for it, and how regulation changes both. I am at the [Department of Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.]{.hero-lead}
 :::
-
-::: {.hero-intro}
-I am an associate professor at the department of [Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics. My primary interest is in asset management.
 :::

@@ -218,3 +218,53 @@ main.content #title-block-header h1.title {
   font-size: var(--fs-sub);
 }
 .nav-footer a { color: var(--muted); }
+
+// ===========================================================================
+//  6.2 Hero (home only)
+// ===========================================================================
+.hero {
+  display: grid;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: var(--col-meta) minmax(0, 1fr);
+    gap: 0 var(--gutter);
+  }
+}
+
+.hero-meta {
+  font-family: var(--sans);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.85;
+  padding-top: 0.5rem;
+  margin: 0;
+}
+
+.hero-name {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--fs-display);
+  line-height: 1.02;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0 0 var(--sp-3);
+}
+
+.hero-lead {
+  font-size: var(--fs-lead);
+  max-width: var(--measure);
+  color: var(--body);
+  margin: 0;
+}
+
+.hero-name,
+.hero-lead,
+.page-lead { display: block; }
