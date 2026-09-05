@@ -277,7 +277,14 @@ main.content #title-block-header .subtitle {
 
 .hero-meta p { margin: 0; }
 
-.hero-name {
+// Element-scoped (not bare `.hero-name`): Quarto's `--section-divs` pandoc
+// extension wraps a heading + the content that follows it (until the next
+// heading) into a `<section>`, and copies the heading's own classes onto
+// that wrapping section too — so a bare `.hero-name` class selector would
+// also match the section and leak this typography (and its margin) onto
+// the sibling `.hero-lead` paragraph nested inside it. Scoping to the `h1`
+// element keeps it on the heading alone.
+h1.hero-name {
   font-family: var(--serif);
   font-weight: 400;
   font-size: var(--fs-display);
@@ -294,7 +301,6 @@ main.content #title-block-header .subtitle {
   margin: 0;
 }
 
-.hero-name,
 .hero-lead { display: block; }
 
 // ===========================================================================
