@@ -4,60 +4,18 @@ toc: false
 ---
 
 ::: {.hero}
-::: {.hero-meta}
 <img class="hero-portrait" src="assets/images/headshot-web.jpg" alt="André Wattø Sjuve">
-
-Associate Professor
-
-NHH
-
-Bergen
-:::
 
 ::: {}
 # André Wattø Sjuve {.hero-name}
 
-[I study asset management — what active managers actually deliver, what investors pay for it, and how regulation changes both. I am at the [Department of Business and Management Science](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/) at NHH Norwegian School of Economics.]{.hero-lead}
-:::
-:::
+::: {.hero-affil}
+Associate Professor · NHH · Bergen
 
-::: {.sect}
-## Selected work
-
-[Three of five]{.sect-tag}
+From November 2026 · Senior Researcher · NBIM
 :::
 
-::: {.entry}
-[[Journal of Portfolio Management]{.entry-org}Forthcoming]{.entry-meta}
-
-[Where Active Management Adds Value for a Large Asset Owner]{.entry-title}
-
-[with Trond Døskeland]{.entry-sub}
-:::
-
-::: {.entry}
-[[Management Science]{.entry-org}September 2025]{.entry-meta}
-
-[Forced to Be Active: Evidence From a Regulation Intervention]{.entry-title}
-
-[with Petter Bjerksund, Trond Døskeland and Andreas Ørpetveit]{.entry-sub}
-
-::: {.entry-links}
-[Publisher](https://doi.org/10.1287/mnsc.2023.03124){.paper-link}
-[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3635718){.paper-link}
-:::
-:::
-
-::: {.entry}
-[[Journal of Empirical Finance]{.entry-org}March 2025]{.entry-meta}
-
-[Do Fees Matter? Investor's Sensitivity to Active Management Fees]{.entry-title}
-
-[with Trond Døskeland and Andreas Ørpetveit]{.entry-sub}
-
-::: {.entry-links}
-[Publisher](https://doi.org/10.1016/j.jempfin.2025.101596){.paper-link}
-[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3857628){.paper-link}
+[I study asset management — what active managers actually deliver, what investors pay for it, and how regulation changes both. From November 2026 I am a Senior Researcher at [Norges Bank Investment Management](https://www.nbim.no/), alongside a 20% position at [NHH Norwegian School of Economics](https://www.nhh.no/en/employees/faculty/andre-watto-sjuve/).]{.hero-lead}
 :::
 :::
 

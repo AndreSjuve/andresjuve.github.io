@@ -260,22 +260,6 @@ main.content #title-block-header .subtitle {
   }
 }
 
-.hero-meta {
-  display: grid;
-  gap: var(--sp-2);
-  align-content: start;
-  font-family: var(--sans);
-  font-size: var(--fs-meta);
-  font-weight: 500;
-  letter-spacing: var(--track-meta);
-  text-transform: uppercase;
-  color: var(--muted);
-  line-height: 1.6;          // spec §4 for --fs-meta
-  padding-top: var(--sp-2);  // was a literal 0.5rem
-  margin: 0;
-}
-
-.hero-meta p { margin: 0; }
 
 // Hero portrait — the ONE exception to §1's no-border-radius rule. A photograph
 // is not a UI surface, and the circular crop is the owner's explicit decision.
@@ -292,9 +276,6 @@ main.content #title-block-header .subtitle {
   border-radius: 50%;
 }
 
-// With a portrait leading the column, drop the optical nudge so the photo's top
-// edge aligns with the name's rather than sitting 8px below it.
-.hero-meta:has(.hero-portrait) { padding-top: 0; }
 
 // Element-scoped (not bare `.hero-name`): Quarto's `--section-divs` pandoc
 // extension wraps a heading + the content that follows it (until the next
@@ -303,6 +284,25 @@ main.content #title-block-header .subtitle {
 // also match the section and leak this typography (and its margin) onto
 // the sibling `.hero-lead` paragraph nested inside it. Scoping to the `h1`
 // element keeps it on the heading alone.
+// Affiliation lines, directly under the name. Middot-separated rather than
+// stacked in the metadata column: with the portrait occupying that column, a
+// left-aligned text stack read as orphaned beneath it.
+.hero-affil {
+  display: grid;
+  gap: var(--sp-1);
+  font-family: var(--sans);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  letter-spacing: var(--track-meta);
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 var(--sp-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-affil p { margin: 0; }
+
 h1.hero-name {
   font-family: var(--serif);
   font-weight: 400;
@@ -310,7 +310,7 @@ h1.hero-name {
   line-height: 1.02;
   letter-spacing: -0.018em;
   color: var(--ink);
-  margin: 0 0 var(--sp-3);
+  margin: 0 0 var(--sp-2);
 }
 
 .hero-lead {
@@ -551,4 +551,14 @@ main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
   // content or viewport. Keep the hairline on every row here rather than
   // leave one column with a dangling rule and the other without one.
   .past-teaching li:last-child { border-bottom: 1px solid var(--rule); }
+}
+
+// Home's exit links now follow the hero directly. Give them air, and place them
+// on the content column so they line up with the name above.
+.hero + .entry-links {
+  margin-top: var(--sp-5);
+}
+
+@media (min-width: 720px) {
+  .hero + .entry-links { margin-left: var(--indent); }
 }

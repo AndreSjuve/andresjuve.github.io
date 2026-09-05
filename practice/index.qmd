@@ -11,19 +11,19 @@ toc: false
 :::
 
 ::: {.entry}
-[[Ministry of Finance]{.entry-org}2025]{.entry-meta}
-
-[Committee member, evaluation of the Government Pension Fund Global]{.entry-title}
-
-[Appointed to the committee assessing active management in Norway's sovereign wealth fund.]{.entry-sub}
-:::
-
-::: {.entry}
 [[Magma]{.entry-org}2026]{.entry-meta}
 
 [Subject editor — investments outside the stock exchange]{.entry-title}
 
 [Magma forskning og viten, volume 29, issue 2.]{.entry-sub}
+:::
+
+::: {.entry}
+[[Ministry of Finance]{.entry-org}2025]{.entry-meta}
+
+[Committee member, evaluation of the Government Pension Fund Global]{.entry-title}
+
+[Appointed to the committee assessing active management in Norway's sovereign wealth fund.]{.entry-sub}
 :::
 
 ::: {.entry}

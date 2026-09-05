@@ -1,6 +1,5 @@
 ---
 title: "Teaching"
-subtitle: "Courses I currently teach at NHH, and what they are actually about."
 toc: false
 ---
 
@@ -11,7 +10,7 @@ toc: false
 :::
 
 ::: {.entry}
-[[FOR21 · BSc]{.entry-org}2024–]{.entry-meta}
+[[FOR21 · BSc]{.entry-org}2024–2026]{.entry-meta}
 
 [Ownership Management and Private Equity]{.entry-title}
 

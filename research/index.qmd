@@ -10,7 +10,7 @@ toc: false
 :::
 
 ::: {.entry}
-[[Journal of Portfolio Management]{.entry-org}Forthcoming]{.entry-meta}
+[[Journal of Portfolio Management]{.entry-org}August 2026]{.entry-meta}
 
 [Where Active Management Adds Value for a Large Asset Owner]{.entry-title}
 
