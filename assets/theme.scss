@@ -384,12 +384,18 @@ main.content h2 {
 // ===========================================================================
 //  6.5 Link — not a button
 // ===========================================================================
-.entry-links {
+// Pandoc puts both link anchors in one shared <p> when they sit on the same
+// source line, so the flex declaration must reach that <p> too — otherwise
+// .entry-links has a single child and the gap has nothing to act between.
+.entry-links,
+.entry-links > p {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-3);
-  margin-top: var(--sp-2);
 }
+
+.entry-links { margin-top: var(--sp-2); }
+.entry-links > p { margin: 0; }
 
 .paper-link {
   font-family: var(--sans);
