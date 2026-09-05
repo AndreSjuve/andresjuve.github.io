@@ -20,6 +20,11 @@ $serif: "Spectral", Georgia, "Times New Roman", serif;
 $sans:  "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
 // Bootstrap / Quarto remapping ----------------------------------------------
+// Quarto hard-codes the root font-size to 17px; the spec's whole rem-based
+// type and space scale was designed against a 16px base. Use 1rem (not
+// 16px) so a reader's browser default font-size preference still wins.
+$font-size-root: 1rem;
+
 // Body text is the serif; the sans is reserved for labels only.
 $font-family-sans-serif: $serif;
 $headings-font-family:   $serif;
