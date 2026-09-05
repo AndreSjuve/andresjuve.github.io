@@ -5,6 +5,8 @@ toc: false
 
 ::: {.hero}
 ::: {.hero-meta}
+<img class="hero-portrait" src="assets/images/headshot-web.jpg" alt="André Wattø Sjuve">
+
 Associate Professor
 
 NHH

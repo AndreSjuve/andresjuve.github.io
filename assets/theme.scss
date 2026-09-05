@@ -277,6 +277,25 @@ main.content #title-block-header .subtitle {
 
 .hero-meta p { margin: 0; }
 
+// Hero portrait — the ONE exception to §1's no-border-radius rule. A photograph
+// is not a UI surface, and the circular crop is the owner's explicit decision.
+// No border, no fill, no shadow: the radius alone. It leads the metadata column
+// rather than sitting beside the name, so the lead paragraph keeps its full
+// --measure; a right-hand portrait column would cut it to ~34 characters.
+.hero-portrait {
+  display: block;
+  // Fixed at the metadata column's width so it stays a portrait at every size.
+  // A percentage width blows it up to the full container on mobile.
+  width: var(--col-meta);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+// With a portrait leading the column, drop the optical nudge so the photo's top
+// edge aligns with the name's rather than sitting 8px below it.
+.hero-meta:has(.hero-portrait) { padding-top: 0; }
+
 // Element-scoped (not bare `.hero-name`): Quarto's `--section-divs` pandoc
 // extension wraps a heading + the content that follows it (until the next
 // heading) into a `<section>`, and copies the heading's own classes onto

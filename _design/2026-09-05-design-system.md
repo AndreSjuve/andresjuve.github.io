@@ -37,9 +37,10 @@ specimens rather than description.
 
 ### Principles
 
-- **Nothing is a card.** No fills, no shadows, no border radius anywhere. Separation is
-  rules and whitespace only. A card says "discrete object"; a publication list is a
-  sequence, not a set of objects.
+- **Nothing is a card.** No fills, no shadows, no border radius anywhere, with exactly one
+  exception: the circular portrait in the hero (§6.2). Separation is rules and whitespace
+  only. A card says "discrete object"; a publication list is a sequence, not a set of
+  objects.
 - **Rules carry hierarchy.** A 1px `--ink` rule means "new section". A 1px `--rule`
   hairline means "next item". Those are the only two rules in the system.
 - **One accent, two jobs.** Navy appears on things you can click, and on the identifying
@@ -172,8 +173,20 @@ with a 1px navy underline and `aria-current="page"`.
 One component, two variants, both on the same `--col-meta` + `--gutter` grid so every page
 opens on the same left edge.
 
-- **Hero** (home only). Left: role, institution, city, stacked, in `--fs-meta`. Right: name
-  at `--fs-display`, then one lead paragraph at `--fs-lead` constrained to `--measure`.
+- **Hero** (home only). Left column, top to bottom: a circular portrait at `--col-meta`
+  square, then role, institution and city stacked in `--fs-meta`. Right: name at
+  `--fs-display`, then one lead paragraph at `--fs-lead` constrained to `--measure`.
+
+  The portrait is the **single exception** to §1's no-border-radius rule. It is a
+  photograph of a person, not a UI surface, and the circular crop is the owner's explicit
+  decision. It carries no border, no fill and no shadow, and it is the only radius allowed
+  anywhere on the site. It sits in the metadata column rather than beside the name so the
+  lead paragraph keeps its full `--measure`; a right-hand portrait column would cut the
+  reading width to roughly 34 characters.
+
+  The image is served at `assets/images/headshot-web.jpg` — 380px square, 18KB. The
+  2362px master stays in the repo at `assets/images/headshot.jpg` and is never referenced
+  by a page.
 - **Page title** (Research, Teaching, Practice). Left column empty. Right: the page name at
   `--fs-display` scaled down one step (`clamp(1.9rem, 4vw, 2.5rem)`), optionally followed by
   a single orienting sentence at `--fs-lead`.
