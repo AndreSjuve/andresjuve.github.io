@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "André Wattø Sjuve"
+  title: "A.W. Sjuve"
   site-url: https://andresjuve.com
   description: "Assistant professor @NHH"
   favicon: assets/images/headshot.jpg
@@ -11,7 +11,6 @@ website:
   back-to-top-navigation: true
 
   navbar:
-    #logo: assets/images/aws_logo.svg
     tools:
     - icon: github
       href: https://github.com/AndreSjuve/
@@ -27,26 +26,17 @@ website:
         href: assets/Andre_W_Sjuve.pdf
 
   page-footer:
-    center:  >-
-     &#169; 2025 André Wattø Sjuve
+    center: >-
+     &#169; 2026 André Wattø Sjuve
 
 format:
   html:
     theme:
-      light:
-        - cosmo
-        - assets/aws-theme-light.scss
-      dark:
-        - cosmo
-        - assets/aws-theme-dark.scss
-    highlight-style:
-      light: github-light
-      dark: github-dark
-    code-link: true
+      - cosmo
+      - assets/theme.scss
+    highlight-style: github
     pagetitle: "{{< meta title >}}"
     lightbox: true
 
-    includes:
-      after-body: assets/theme-persister.js
 execute:
   freeze: auto

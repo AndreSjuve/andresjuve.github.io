@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research – André Wattø Sjuve</title>
+<title>Research – A.W. Sjuve</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -37,12 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet" class="quarto-color-scheme-extra">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-30741eedaf480f68f98110041a80219e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-19f5b93d2fe61442510de33562815228.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-30741eedaf480f68f98110041a80219e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ffea21a71f9ec86551eba4c08bab9f8e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,169 +75,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -244,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">André Wattø Sjuve</span>
+    <span class="navbar-title">A.W. Sjuve</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -269,7 +108,6 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://github.com/AndreSjuve/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -281,7 +119,6 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content" id="quarto-document-content">
-
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -304,54 +141,101 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="manuscripts-being-prepared" class="level2">
 <h2 class="anchored" data-anchor-id="manuscripts-being-prepared">Manuscripts being prepared</h2>
+<div class="paper">
+<p><span class="paper-badge">Under review</span></p>
 <section id="sustainable-but-not-price-blind-fee-sensitivity-in-esg-mutual-fund-flows" class="level4">
 <h4 class="anchored" data-anchor-id="sustainable-but-not-price-blind-fee-sensitivity-in-esg-mutual-fund-flows">Sustainable, But Not Price-Blind: Fee Sensitivity in ESG Mutual Fund Flows</h4>
-<p><em>Under review</em></p>
-<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4187059">SSRN</a></p>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4187059" class="paper-link">SSRN</a></p>
 </section>
-<section id="two-dimensional-activeness-exploring-the-interplay-between-active-ownership-and-active-portfolio-management" class="level4">
+</div>
+<section id="two-dimensional-activeness-exploring-the-interplay-between-active-ownership-and-active-portfolio-management" class="level4 paper">
 <h4 class="anchored" data-anchor-id="two-dimensional-activeness-exploring-the-interplay-between-active-ownership-and-active-portfolio-management">Two-Dimensional Activeness: Exploring the Interplay Between Active Ownership and Active Portfolio Management</h4>
-<p>Joint with Trond Døskeland, Xuan Li, and Andreas Ørpetveit</p>
+<p><span class="paper-authors">with Trond Døskeland, Xuan Li, and Andreas Ørpetveit</span></p>
 </section>
 </section>
 <section id="published-forthcoming-papers" class="level2">
 <h2 class="anchored" data-anchor-id="published-forthcoming-papers">Published &amp; Forthcoming Papers</h2>
+<div class="paper">
+<p><span class="paper-badge">Journal of Portfolio Management · Forthcoming</span></p>
+<section id="where-active-management-adds-value-for-a-large-asset-owner" class="level4">
+<h4 class="anchored" data-anchor-id="where-active-management-adds-value-for-a-large-asset-owner">Where Active Management Adds Value for a Large Asset Owner</h4>
+<p><span class="paper-authors">with Trond Døskeland</span></p>
+<details class="paper-abstract">
+<summary>
+Show abstract
+</summary>
+<p>
+We study how one large benchmarked asset owner allocated scarce active-risk budget across active functions, using evidence from Norway’s sovereign wealth fund. Using fund-level data from 1998 through 2025 and strategy-level evidence from 2013 through 2025, we find that the most consistent gains came from implementation-oriented activities that scaled well across a very large portfolio. Equity security selection also added value, though less uniformly. Discretionary allocation, by contrast, reduced benchmark-relative returns on average. Although Norway’s fund is institutionally distinctive, the evidence suggests that where investors share similar benchmark governance, scale, and implementation capacity, the strongest case for active management may lie in repeatable implementation advantages and selected forms of specialized security selection.
+</p>
+</details>
+</section>
+</div>
+<div class="paper">
+<p><span class="paper-badge">Management Science · September 2025</span></p>
 <section id="forced-to-be-active-evidence-from-a-regulation-intervention" class="level4">
 <h4 class="anchored" data-anchor-id="forced-to-be-active-evidence-from-a-regulation-intervention">Forced to Be Active: Evidence From a Regulation Intervention</h4>
-<p><em>Management Science</em> – September 2025</p>
-<p>Joint with Petter Bjerksund, Trond Døskeland, and Andreas Ørpetveit</p>
-<p><a href="https://doi.org/10.1287/mnsc.2023.03124">Publisher link</a></p>
-<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3635718">SSRN</a></p>
-<p><strong>Abstract:</strong> Mutual funds known as closet indexers are marketed as active, but actually operate as low-activity funds. Investors end up paying for full service, but only receiving a part of it. Supervisory authorities around the world are considering ways to regulate these funds. In this context, we examine the impact of regulatory interventions by Scandinavian regulators. We compare the scrutinized Scandinavian funds with similar unaffected European funds. The findings suggest that the regulated Scandinavian funds preferred increased activity over fee reduction. Consequently, fund managers adopted more active management strategies, resulting in a significant 2% decrease in annual alpha. Therefore, the regulatory interventions resulted in unfavorable outcomes for investors.</p>
+<p><span class="paper-authors">with Petter Bjerksund, Trond Døskeland, and Andreas Ørpetveit</span></p>
+<p><a href="https://doi.org/10.1287/mnsc.2023.03124" class="paper-link">Publisher link</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3635718" class="paper-link">SSRN</a></p>
+<details class="paper-abstract">
+<summary>
+Show abstract
+</summary>
+<p>
+Mutual funds known as closet indexers are marketed as active, but actually operate as low-activity funds. Investors end up paying for full service, but only receiving a part of it. Supervisory authorities around the world are considering ways to regulate these funds. In this context, we examine the impact of regulatory interventions by Scandinavian regulators. We compare the scrutinized Scandinavian funds with similar unaffected European funds. The findings suggest that the regulated Scandinavian funds preferred increased activity over fee reduction. Consequently, fund managers adopted more active management strategies, resulting in a significant 2% decrease in annual alpha. Therefore, the regulatory interventions resulted in unfavorable outcomes for investors.
+</p>
+</details>
 </section>
+</div>
+<div class="paper">
+<p><span class="paper-badge">Journal of Empirical Finance · March 2025</span></p>
 <section id="do-fees-matter-investors-sensitivity-to-active-management-fees" class="level4">
 <h4 class="anchored" data-anchor-id="do-fees-matter-investors-sensitivity-to-active-management-fees">Do Fees Matter? Investor’s Sensitivity to Active Management Fees</h4>
-<p><em>Journal of Empirical Finance</em> – March 2025</p>
-<p>Joint with Trond Døskeland, and Andreas Ørpetveit</p>
-<p><a href="https://doi.org/10.1016/j.jempfin.2025.101596">Publisher link</a></p>
-<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3857628">SSRN</a></p>
-<p><strong>Abstract:</strong> Following the framework established by Berk and Green (2004), mutual fund inflows and fees should be uncorrelated at equilibrium. We empirically explore this relationship by investigating the temporal changes in fund fees and flows. Our fee metrics focus on active management services rather than diversification. We analyze the additional fee compared to passive alternatives and additional fee per unit of active management, along with the traditionally used total fee. Our analysis of global data reveals a negative time series correlation between both measures of active management fee and fund flows.</p>
-
-
+<p><span class="paper-authors">with Trond Døskeland, and Andreas Ørpetveit</span></p>
+<p><a href="https://doi.org/10.1016/j.jempfin.2025.101596" class="paper-link">Publisher link</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3857628" class="paper-link">SSRN</a></p>
+<details class="paper-abstract">
+<summary>
+Show abstract
+</summary>
+<p>
+Following the framework established by Berk and Green (2004), mutual fund inflows and fees should be uncorrelated at equilibrium. We empirically explore this relationship by investigating the temporal changes in fund fees and flows. Our fee metrics focus on active management services rather than diversification. We analyze the additional fee compared to passive alternatives and additional fee per unit of active management, along with the traditionally used total fee. Our analysis of global data reveals a negative time series correlation between both measures of active management fee and fund flows.
+</p>
+</details>
 </section>
+</div>
+</section>
+<section id="other-writings" class="level2">
+<h2 class="anchored" data-anchor-id="other-writings">Other writings</h2>
+<div class="paper">
+<p><span class="paper-badge">Government report · December 2025</span></p>
+<section id="evaluating-the-performance-of-active-management-in-norways-sovereign-wealth-fund-gpfg" class="level4">
+<h4 class="anchored" data-anchor-id="evaluating-the-performance-of-active-management-in-norways-sovereign-wealth-fund-gpfg">Evaluating the Performance of Active Management in Norway’s Sovereign Wealth Fund (GPFG)</h4>
+<p><span class="paper-authors">with Trond Døskeland</span></p>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887182" class="paper-link">SSRN</a></p>
+<details class="paper-abstract">
+<summary>
+Show abstract
+</summary>
+<p>
+This report concludes that Norges Bank’s active management of the Fund has created substantial value for the Norwegian people. Since 1998, active decisions have contributed about 611 billion NOK before costs, and 402 billion NOK after costs. This corresponds to average annual active returns of 0.27% before costs, and 0.19% after costs. In the most recent four year period, active management has continued to add value, with mean annual gross and net active returns of 0.24% and 0.20%. These results reflect very low management costs of about 0.04% per year.
+</p>
+</details>
+</section>
+</div>
+<div class="paper">
+<p><span class="paper-badge">Industry report · November 2023</span></p>
+<section id="return-on-pension-assets" class="level4">
+<h4 class="anchored" data-anchor-id="return-on-pension-assets">Return on pension assets</h4>
+<p><span class="paper-authors">with Andreas Ørpetveit</span></p>
+<p><a href="https://www.pensjonskontoret.no/rapporter-mv/2023-nhh---avkastning-pa-pensjonsmidlene" class="paper-link">Publisher link</a></p>
+</section>
+</div>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -401,13 +285,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -756,7 +641,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2025 André Wattø Sjuve</p>
+<p>© 2026 André Wattø Sjuve</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
