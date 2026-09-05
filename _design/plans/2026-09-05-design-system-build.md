@@ -266,15 +266,15 @@ python _design/tools/check_palette.py
 Expected output, exit code 0:
 
 ```
-  ok  $ink        #14161A  17.35 : 1  (min 4.5)
+  ok  $ink        #14161A  17.20 : 1  (min 4.5)
   ok  $body-ink   #4A4F57   7.83 : 1  (min 4.5)
-  ok  $muted      #676D76   4.98 : 1  (min 4.5)
-  ok  $navy       #14346B  11.46 : 1  (min 4.5)
+  ok  $muted      #676D76   4.95 : 1  (min 4.5)
+  ok  $navy       #14346B  11.51 : 1  (min 4.5)
 
 PASS: all text colours meet WCAG AA on $paper #FAF9F6
 ```
 
-If any ratio differs by more than 0.05 from these numbers, a hex was mistyped — fix the hex, do not adjust the test.
+If any ratio differs by more than 0.02 from these numbers, a hex was mistyped — fix the hex, do not adjust the test.
 
 - [ ] **Step 5: Point Quarto at the theme and drop the stale title**
 
