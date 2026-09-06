@@ -1,6 +1,6 @@
 ---
 title: "Practice"
-subtitle: "Work for public bodies, asset owners and the profession, alongside the academic research."
+subtitle: "Work for public bodies, asset owners and the profession."
 toc: false
 ---
 

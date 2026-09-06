@@ -1,10 +1,10 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
 
 website:
   title: "André Wattø Sjuve"
-  site-url: https://andresjuve.com
+  site-url: https://andresjuve.github.io
   description: "Associate Professor of Finance at NHH Norwegian School of Economics"
   favicon: assets/images/favicon.svg
   page-navigation: true

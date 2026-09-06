@@ -11,3 +11,7 @@
 **/*.quarto_ipynb
 
 .playwright-mcp/
+
+# Quarto build output — the site is built and deployed by GitHub Actions,
+# never committed. See .github/workflows/publish.yml
+/_site/
