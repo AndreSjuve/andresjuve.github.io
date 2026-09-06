@@ -1,19 +1,17 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
 
 website:
-  title: "A.W. Sjuve"
-  site-url: https://andresjuve.com
-  description: "Assistant professor @NHH"
-  favicon: assets/images/headshot.jpg
+  title: "André Wattø Sjuve"
+  site-url: https://andresjuve.github.io
+  description: "Associate Professor of Finance at NHH Norwegian School of Economics"
+  favicon: assets/images/favicon.svg
   page-navigation: true
-  back-to-top-navigation: true
+  back-to-top-navigation: false
+  search: false
 
   navbar:
-    tools:
-    - icon: github
-      href: https://github.com/AndreSjuve/
     right:
       - text: Home
         aria-label: "Home"
@@ -21,8 +19,14 @@ website:
       - text: Research
         aria-label: "Research"
         href: research/index.qmd
+      - text: Teaching
+        aria-label: "Teaching"
+        href: teaching/index.qmd
+      - text: Practice
+        aria-label: "Practice"
+        href: practice/index.qmd
       - text: CV
-        aria-label: "CV"
+        aria-label: "CV (PDF)"
         href: assets/Andre_W_Sjuve.pdf
 
   page-footer:
@@ -31,12 +35,16 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - assets/theme.scss
+    theme: assets/theme.scss
     highlight-style: github
     pagetitle: "{{< meta title >}}"
+    description-meta: "Associate Professor of Finance at NHH Norwegian School of Economics"
+    anchor-sections: false
     lightbox: true
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 execute:
   freeze: auto

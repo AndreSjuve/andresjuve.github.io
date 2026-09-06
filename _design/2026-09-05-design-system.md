@@ -37,9 +37,10 @@ specimens rather than description.
 
 ### Principles
 
-- **Nothing is a card.** No fills, no shadows, no border radius anywhere. Separation is
-  rules and whitespace only. A card says "discrete object"; a publication list is a
-  sequence, not a set of objects.
+- **Nothing is a card.** No fills, no shadows, no border radius anywhere, with exactly one
+  exception: the circular portrait in the hero (§6.2). Separation is rules and whitespace
+  only. A card says "discrete object"; a publication list is a sequence, not a set of
+  objects.
 - **Rules carry hierarchy.** A 1px `--ink` rule means "new section". A 1px `--rule`
   hairline means "next item". Those are the only two rules in the system.
 - **One accent, two jobs.** Navy appears on things you can click, and on the identifying
@@ -75,16 +76,16 @@ Light only. No dark palette ships in this version; see §10.
 | Token | Hex | Role | Contrast on `--paper` |
 |---|---|---|---|
 | `--paper` | `#FAF9F6` | Page ground. Barely-warm white | — |
-| `--ink` | `#14161A` | Name, entry titles, section heads, strong rules | 17.4 : 1 |
-| `--body` | `#4A4F57` | Running text, coauthor lines | 7.8 : 1 |
-| `--muted` | `#676D76` | Metadata column, nav, section tags, labels | 5.0 : 1 |
+| `--ink` | `#14161A` | Name, entry titles, section heads, strong rules | 17.20 : 1 |
+| `--body` | `#4A4F57` | Running text, coauthor lines | 7.83 : 1 |
+| `--muted` | `#676D76` | Metadata column, nav, section tags, labels | 4.95 : 1 |
 | `--rule` | `#DDDAD1` | Hairline between entries | non-text |
-| `--navy` | `#14346B` | Links, metadata identifying line, current nav item, focus ring | 11.5 : 1 |
+| `--navy` | `#14346B` | Links, metadata identifying line, current nav item, focus ring | 11.51 : 1 |
 | `--navy-line` | `#B9C4DA` | Link underlines only | non-text |
 
 **`--muted` was darkened from the `#868C95` shown in the type study.** At that value it
 measured 3.3 : 1, which fails WCAG AA — and it is used for the venue column, the one thing
-audience 1 reads. `#676D76` passes at 5.0 : 1 and looks materially the same.
+audience 1 reads. `#676D76` passes at 4.95 : 1 and looks materially the same.
 
 There is deliberately **no surface or card token.** If a future component seems to need
 one, that is a signal the component is wrong.
@@ -119,6 +120,7 @@ Base `16px`. Sizes in `rem` so browser zoom behaves.
 | `--fs-sub` | `0.95rem` | 1.55 | — | Coauthor lines |
 | `--fs-label` | `0.68rem` | 1.6 | +0.13em | Nav, section tags, link buttons |
 | `--fs-meta` | `0.68rem` | 1.6 | +0.09em | Metadata column |
+| (same, org line) | `0.68rem` | 1.6 | +0.07em | The metadata identifying line, Archivo 600 |
 
 Weights: Spectral 400 for body and the display name (at that size weight is unnecessary),
 500 for titles, section heads and the brand; Archivo 500 for labels, 600 for venue names.
@@ -136,8 +138,8 @@ page.
 |---|---|---|
 | `--sp-1` | `0.25rem` | Gap between title and subtitle |
 | `--sp-2` | `0.5rem` | Gap inside a label group |
-| `--sp-3` | `1rem` | Entry internal padding |
-| `--sp-4` | `1.5rem` | Between entries |
+| `--sp-3` | `1rem` | Entry padding; gap between links in a row |
+| `--sp-4` | `1.5rem` | Page-title block padding and margin |
 | `--sp-5` | `2.25rem` | Above a section head |
 | `--sp-6` | `3.5rem` | Page-level block separation |
 | `--measure` | `54ch` | Max width of any running text |
@@ -149,7 +151,12 @@ page.
 Below `--bp` the two-column grid collapses to one column, metadata above content. There is
 one breakpoint; a second would mean the grid is wrong.
 
-Layout uses `grid` and `gap` throughout — never per-element margins that collapse.
+Layout uses `grid` and `gap` throughout, with one documented exception. A single grid
+`row-gap` cannot express both "tight between an entry's title and its subtitle" and "looser
+before the link row"; those need different spacing and there is no subgrid to lean on. So
+`.entry-links` and `details.abstract` each carry a `margin-top: var(--sp-2)` on top of the
+entry's `row-gap: var(--sp-1)`, giving 12px. That composite is deliberate and is the only
+place per-element margins are permitted. Everywhere else, gap governs.
 
 ---
 
@@ -166,8 +173,20 @@ with a 1px navy underline and `aria-current="page"`.
 One component, two variants, both on the same `--col-meta` + `--gutter` grid so every page
 opens on the same left edge.
 
-- **Hero** (home only). Left: role, institution, city, stacked, in `--fs-meta`. Right: name
-  at `--fs-display`, then one lead paragraph at `--fs-lead` constrained to `--measure`.
+- **Hero** (home only). Left column, top to bottom: a circular portrait at `--col-meta`
+  square, then role, institution and city stacked in `--fs-meta`. Right: name at
+  `--fs-display`, then one lead paragraph at `--fs-lead` constrained to `--measure`.
+
+  The portrait is the **single exception** to §1's no-border-radius rule. It is a
+  photograph of a person, not a UI surface, and the circular crop is the owner's explicit
+  decision. It carries no border, no fill and no shadow, and it is the only radius allowed
+  anywhere on the site. It sits in the metadata column rather than beside the name so the
+  lead paragraph keeps its full `--measure`; a right-hand portrait column would cut the
+  reading width to roughly 34 characters.
+
+  The image is served at `assets/images/headshot-web.jpg` — 380px square, 18KB. The
+  2362px master stays in the repo at `assets/images/headshot.jpg` and is never referenced
+  by a page.
 - **Page title** (Research, Teaching, Practice). Left column empty. Right: the page name at
   `--fs-display` scaled down one step (`clamp(1.9rem, 4vw, 2.5rem)`), optionally followed by
   a single orienting sentence at `--fs-lead`.
@@ -216,7 +235,7 @@ Footer: existing Quarto footer, `--muted`, `--fs-sub`, 1px `--rule` above.
 
 | Page | Contains |
 |---|---|
-| **Home** | Hero · Selected work (3 publication entries: *Management Science*, *JPM* forthcoming, *JEF*) · one link to full research |
+| **Home** | Hero · Selected work (3 publication entries: *Management Science*, *JPM* forthcoming, *JEF*) · a link row to full research and to the CV |
 | **Research** | Published & forthcoming · Manuscripts being prepared |
 | **Teaching** | BED3 · FOR21, each with a plain-language description · earlier teaching assistantships as a condensed list |
 | **Practice** | Ministry of Finance GPFG committee · Magma subject editorship · KLP · Norsk legemiddelforsikring · Pension Office · the GPFG and pension reports |

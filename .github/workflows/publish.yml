@@ -1,0 +1,61 @@
+name: Publish site
+
+# Builds the Quarto site and deploys it to GitHub Pages.
+# The rendered site is NOT committed to the repository — it is produced here
+# on every push to master and uploaded straight to Pages.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let one deployment finish before the next starts; never cancel a running
+# deploy, or Pages can be left serving a half-published site.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.18
+
+      # The design system's contrast floor is a real test, not a comment.
+      # If a colour is edited below WCAG AA, the build fails here rather than
+      # shipping an unreadable page.
+      - name: Check palette contrast
+        run: python3 _design/tools/check_palette.py
+
+      - name: Render site
+        run: quarto render
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

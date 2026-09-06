@@ -1,0 +1,47 @@
+---
+title: "Teaching"
+toc: false
+---
+
+::: {.sect}
+## Current courses
+
+[NHH]{.sect-tag}
+:::
+
+::: {.entry}
+[[FOR21 · BSc]{.entry-org}2024–2026]{.entry-meta}
+
+[Ownership Management and Private Equity]{.entry-title}
+
+[How private equity owners try to create value — governance, leverage and operational change — and what the evidence says about whether they succeed.]{.entry-sub}
+:::
+
+::: {.entry}
+[[BED3 · BSc]{.entry-org}2023–]{.entry-meta}
+
+[Capital Budgeting and Finance]{.entry-title}
+
+[The core toolkit for deciding which investments a firm should make: discounting, the cost of capital, and how those decisions hold up under uncertainty.]{.entry-sub}
+:::
+
+::: {.sect}
+## Earlier teaching
+
+[Assistantships]{.sect-tag}
+:::
+
+::: {}
+<ul class="past-teaching">
+<li>Asset Management (MSc) <span>2019–2021</span></li>
+<li>Capital Budgeting (MSc) <span>2020</span></li>
+<li>Management Control (MSc) <span>2018–2020</span></li>
+<li>Introduction to R (MSc) <span>2018–2020</span></li>
+<li>Capital Budgeting and Finance (BSc) <span>2017–2018</span></li>
+<li>Empirical Methods (BSc) <span>2017–2018</span></li>
+<li>Statistics for Economists (BSc) <span>2016–2018</span></li>
+<li>Calculus and Linear Algebra (BSc) <span>2016–2018</span></li>
+<li>Mathematics for Economists (BSc) <span>2015–2017</span></li>
+<li>Financial Accounting (BSc) <span>2015</span></li>
+</ul>
+:::

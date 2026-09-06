@@ -3,89 +3,78 @@ title: "Research"
 toc: false
 ---
 
-## Manuscripts being prepared
+::: {.sect}
+## Published & forthcoming
 
-::: {.paper}
-[Under review]{.paper-badge}
-
-#### Sustainable, But Not Price-Blind: Fee Sensitivity in ESG Mutual Fund Flows
-
-[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4187059){.paper-link}
+[Peer reviewed]{.sect-tag}
 :::
 
-::: {.paper}
-#### Two-Dimensional Activeness: Exploring the Interplay Between Active Ownership and Active Portfolio Management
+::: {.entry}
+[[Journal of Portfolio Management]{.entry-org}August 2026]{.entry-meta}
 
-[with Trond Døskeland, Xuan Li, and Andreas Ørpetveit]{.paper-authors}
-:::
+[Where Active Management Adds Value for a Large Asset Owner]{.entry-title}
 
-## Published & Forthcoming Papers
+[with Trond Døskeland]{.entry-sub}
 
-::: {.paper}
-[Journal of Portfolio Management · Forthcoming]{.paper-badge}
-
-#### Where Active Management Adds Value for a Large Asset Owner
-
-[with Trond Døskeland]{.paper-authors}
-
-<details class="paper-abstract"><summary>Show abstract</summary>
-<p>We study how one large benchmarked asset owner allocated scarce active-risk budget across active functions, using evidence from Norway’s sovereign wealth fund. Using fund-level data from 1998 through 2025 and strategy-level evidence from 2013 through 2025, we find that the most consistent gains came from implementation-oriented activities that scaled well across a very large portfolio. Equity security selection also added value, though less uniformly. Discretionary allocation, by contrast, reduced benchmark-relative returns on average. Although Norway’s fund is institutionally distinctive, the evidence suggests that where investors share similar benchmark governance, scale, and implementation capacity, the strongest case for active management may lie in repeatable implementation advantages and selected forms of specialized security selection.</p>
+<details class="abstract"><summary>Abstract</summary>
+<p>We study how one large benchmarked asset owner allocated scarce active-risk budget across active functions, using evidence from Norway's sovereign wealth fund. Using fund-level data from 1998 through 2025 and strategy-level evidence from 2013 through 2025, we find that the most consistent gains came from implementation-oriented activities that scaled well across a very large portfolio. Equity security selection also added value, though less uniformly. Discretionary allocation, by contrast, reduced benchmark-relative returns on average. Although Norway's fund is institutionally distinctive, the evidence suggests that where investors share similar benchmark governance, scale, and implementation capacity, the strongest case for active management may lie in repeatable implementation advantages and selected forms of specialized security selection.</p>
 </details>
 :::
 
-::: {.paper}
-[Management Science · September 2025]{.paper-badge}
+::: {.entry}
+[[Management Science]{.entry-org}September 2025]{.entry-meta}
 
-#### Forced to Be Active: Evidence From a Regulation Intervention
+[Forced to Be Active: Evidence From a Regulation Intervention]{.entry-title}
 
-[with Petter Bjerksund, Trond Døskeland, and Andreas Ørpetveit]{.paper-authors}
+[with Petter Bjerksund, Trond Døskeland and Andreas Ørpetveit]{.entry-sub}
 
-[Publisher link](https://doi.org/10.1287/mnsc.2023.03124){.paper-link}
+::: {.entry-links}
+[Publisher](https://doi.org/10.1287/mnsc.2023.03124){.paper-link}
 [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3635718){.paper-link}
+:::
 
-<details class="paper-abstract"><summary>Show abstract</summary>
+<details class="abstract"><summary>Abstract</summary>
 <p>Mutual funds known as closet indexers are marketed as active, but actually operate as low-activity funds. Investors end up paying for full service, but only receiving a part of it. Supervisory authorities around the world are considering ways to regulate these funds. In this context, we examine the impact of regulatory interventions by Scandinavian regulators. We compare the scrutinized Scandinavian funds with similar unaffected European funds. The findings suggest that the regulated Scandinavian funds preferred increased activity over fee reduction. Consequently, fund managers adopted more active management strategies, resulting in a significant 2% decrease in annual alpha. Therefore, the regulatory interventions resulted in unfavorable outcomes for investors.</p>
 </details>
 :::
 
-::: {.paper}
-[Journal of Empirical Finance · March 2025]{.paper-badge}
+::: {.entry}
+[[Journal of Empirical Finance]{.entry-org}March 2025]{.entry-meta}
 
-#### Do Fees Matter? Investor's Sensitivity to Active Management Fees
+[Do Fees Matter? Investor's Sensitivity to Active Management Fees]{.entry-title}
 
-[with Trond Døskeland, and Andreas Ørpetveit]{.paper-authors}
+[with Trond Døskeland and Andreas Ørpetveit]{.entry-sub}
 
-[Publisher link](https://doi.org/10.1016/j.jempfin.2025.101596){.paper-link}
+::: {.entry-links}
+[Publisher](https://doi.org/10.1016/j.jempfin.2025.101596){.paper-link}
 [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3857628){.paper-link}
+:::
 
-<details class="paper-abstract"><summary>Show abstract</summary>
+<details class="abstract"><summary>Abstract</summary>
 <p>Following the framework established by Berk and Green (2004), mutual fund inflows and fees should be uncorrelated at equilibrium. We empirically explore this relationship by investigating the temporal changes in fund fees and flows. Our fee metrics focus on active management services rather than diversification. We analyze the additional fee compared to passive alternatives and additional fee per unit of active management, along with the traditionally used total fee. Our analysis of global data reveals a negative time series correlation between both measures of active management fee and fund flows.</p>
 </details>
 :::
 
-## Other writings
+::: {.sect}
+## Manuscripts being prepared
 
-::: {.paper}
-[Government report · December 2025]{.paper-badge}
-
-#### Evaluating the Performance of Active Management in Norway's Sovereign Wealth Fund (GPFG)
-
-[with Trond Døskeland]{.paper-authors}
-
-[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887182){.paper-link}
-
-<details class="paper-abstract"><summary>Show abstract</summary>
-<p>This report concludes that Norges Bank’s active management of the Fund has created substantial value for the Norwegian people. Since 1998, active decisions have contributed about 611 billion NOK before costs, and 402 billion NOK after costs. This corresponds to average annual active returns of 0.27% before costs, and 0.19% after costs. In the most recent four year period, active management has continued to add value, with mean annual gross and net active returns of 0.24% and 0.20%. These results reflect very low management costs of about 0.04% per year.</p>
-</details>
+[Working papers]{.sect-tag}
 :::
 
-::: {.paper}
-[Industry report · November 2023]{.paper-badge}
+::: {.entry}
+[[Under review]{.entry-org}Single authored]{.entry-meta}
 
-#### Return on pension assets
+[Sustainable, But Not Price-Blind: Fee Sensitivity in ESG Mutual Fund Flows]{.entry-title}
 
-[with Andreas Ørpetveit]{.paper-authors}
+::: {.entry-links}
+[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4187059){.paper-link}
+:::
+:::
 
-[Publisher link](https://www.pensjonskontoret.no/rapporter-mv/2023-nhh---avkastning-pa-pensjonsmidlene){.paper-link}
+::: {.entry}
+[[In progress]{.entry-org}]{.entry-meta}
 
+[Two-Dimensional Activeness: Exploring the Interplay Between Active Ownership and Active Portfolio Management]{.entry-title}
+
+[with Trond Døskeland, Xuan Li and Andreas Ørpetveit]{.entry-sub}
 :::

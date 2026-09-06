@@ -1,245 +1,564 @@
 /*-- scss:defaults --*/
 
-// Load typography
-// Current: Option A — Newsreader (display serif) + Inter (body).
-// To switch back to Option C (Fraunces + Source Sans 3), swap this @import and the
-// two font variables below for:
-//   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
-//   $font-family-sans-serif: "Source Sans 3", ...;
-//   $headings-font-family:   "Fraunces", Georgia, "Times New Roman", serif;
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+// ===========================================================================
+//  Bone & Navy — see _design/2026-09-05-design-system.md
+//  These seven hexes are the only colours in the system. Change one here and
+//  the whole site follows. Re-run _design/tools/check_palette.py afterwards.
+// ===========================================================================
+$paper:      #FAF9F6;   // page ground, barely-warm white
+$ink:        #14161A;   // name, titles, section heads, strong rules
+$body-ink:   #4A4F57;   // running text, coauthor lines
+$muted:      #676D76;   // metadata column, nav, labels
+$rule:       #DDDAD1;   // hairline between entries
+$navy:       #14346B;   // links, metadata identifying line, focus ring
+$navy-line:  #B9C4DA;   // link underlines only
 
-// ===========================================================================
-//  COLOUR PALETTE — "Linen Fjord"
-//  Change a value here to recolour the whole site.
-// ===========================================================================
-$linen:        #f4f1ec; // page background (warm off-white)
-$card:         #fbfaf7; // card / panel surface
-$ink:          #243039; // headings, name, strongest text
-$body-text:    #3a4650; // body copy
-$muted:        #8a8073; // roles, meta, secondary (warm grey)
-$slate:        #4f6571; // links, accents
-$slate-mid:    #6e8694; // lighter slate (hover, photo gradient)
-$hairline:     #e3ddd3; // rules, borders
-$green:        #3a6b5e; // status badge text
-$green-bg:     #dde6e3; // status badge background
-// ===========================================================================
+// Type ----------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap');
 
-// Fonts
-$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$headings-font-family:   "Newsreader", Georgia, "Times New Roman", serif;
+$serif: "Spectral", Georgia, "Times New Roman", serif;
+$sans:  "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+// Bootstrap / Quarto remapping ----------------------------------------------
+// Quarto hard-codes the root font-size to 17px; the spec's whole rem-based
+// type and space scale was designed against a 16px base. Use 1rem (not
+// 16px) so a reader's browser default font-size preference still wins.
+$font-size-root: 1rem;
+
+// Body text is the serif; the sans is reserved for labels only.
+$font-family-sans-serif: $serif;
+$headings-font-family:   $serif;
 $headings-font-weight:   500;
 
-// Bootstrap / Quarto variable mapping
-$primary:        $slate;
-$secondary:      $muted;
-$body-bg:        $linen;
-$body-color:     $body-text;
+$body-bg:        $paper;
+$body-color:     $body-ink;
 $headings-color: $ink;
 
-$link-color:            $slate;
+$primary:   $navy;
+$secondary: $muted;
+
+$link-color:            $navy;
 $link-decoration:       none;
-$link-hover-color:      $slate-mid;
-$link-hover-decoration: underline;
+$link-hover-color:      $navy;
+$link-hover-decoration: none;
 
-$navbar-fg: $slate;
+$border-color: $rule;
+$navbar-fg:    $muted;
 
-$border-color: $hairline;
+// No cards means no radius, anywhere.
+$border-radius:    0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$border-radius-xl: 0;
 
 /*-- scss:rules --*/
 
+// ===========================================================================
+//  Tokens. Components below reference only these — never a literal.
+// ===========================================================================
+:root {
+  --paper:      #{$paper};
+  --ink:        #{$ink};
+  --body:       #{$body-ink};
+  --muted:      #{$muted};
+  --rule:       #{$rule};
+  --navy:       #{$navy};
+  --navy-line:  #{$navy-line};
+
+  --serif: #{$serif};
+  --sans:  #{$sans};
+
+  --fs-display:    clamp(2.2rem, 5.2vw, 3.25rem);
+  --fs-page-title: clamp(1.9rem, 4vw, 2.5rem);
+  --fs-lead:       1.05rem;
+  --fs-section:    1.12rem;
+  --fs-title:      1.16rem;
+  --fs-body:       1rem;
+  --fs-sub:        0.95rem;
+  --fs-label:      0.68rem;
+  --fs-meta:       0.68rem;
+
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 1rem;
+  --sp-4: 1.5rem;
+  --sp-5: 2.25rem;
+  --sp-6: 3.5rem;
+
+  --measure:  54ch;
+  --col-meta: 9rem;
+  --gutter:   2.75rem;
+  --page-max: 46rem;
+  --indent:   calc(var(--col-meta) + var(--gutter));
+
+  --track-label: 0.13em;   // nav, section tags, link buttons, disclosures
+  --track-meta:  0.09em;   // metadata column
+}
+
 body {
+  font-family: var(--serif);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  background: var(--paper);
+  color: var(--body);
   -webkit-font-smoothing: antialiased;
 }
 
-// ---- Navbar -------------------------------------------------------------
+// Focus is never removed.
+:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+// Bootstrap's compiled .nav-link:focus-visible (outline:0 + a 25%-alpha
+// box-shadow) is more specific than the rule above and silently wins,
+// leaving keyboard focus on nav links nearly invisible. Restore the spec's
+// solid outline here.
+.nav-link:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// ===========================================================================
+//  6.1 Navbar
+// ===========================================================================
 .navbar {
-  background: transparent;
-  border-bottom: 1px solid $hairline;
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
+  padding-top: var(--sp-3);
+  padding-bottom: var(--sp-2);
+}
+
+.navbar > .container-fluid,
+.navbar > .container {
+  max-width: var(--page-max);
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-title {
-  font-family: $headings-font-family;
+  font-family: var(--serif);
+  font-style: italic;
   font-weight: 500;
-  color: $ink;
-  letter-spacing: .02em;
+  font-size: var(--fs-body);
+  letter-spacing: 0;
+  color: var(--ink);
 }
 
 .navbar-nav .nav-link {
-  color: $slate !important;
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .8rem;
-  margin: 0 .35rem;
+  color: var(--muted) !important;
   padding-bottom: 2px !important;
+  margin: 0 0 0 var(--sp-3);
   border-bottom: 1px solid transparent;
+}
 
-  &:hover {
-    border-bottom: 1px solid $slate;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link[aria-current="page"],
+.navbar-nav .nav-link.active {
+  color: var(--navy) !important;
+  border-bottom-color: var(--navy);
+}
+
+// ===========================================================================
+//  Page container — one measure for the whole site
+// ===========================================================================
+main.content {
+  max-width: var(--page-max);
+  width: 100%;
+  margin-inline: auto;
+  padding-top: var(--sp-6);
+  padding-bottom: var(--sp-6);
+}
+
+// ===========================================================================
+//  6.2 Page title — the hero's second variant. Same grid, left column empty,
+//  so every page opens on the same left edge as the home page's name.
+// ===========================================================================
+main.content #title-block-header:has(h1.title) {
+  display: grid;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-4);
+  margin-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 720px) {
+  main.content #title-block-header:has(h1.title) {
+    grid-template-columns: var(--col-meta) minmax(0, 1fr);
+    gap: 0 var(--gutter);
   }
+  main.content #title-block-header:has(h1.title) > * { grid-column: 2; }
 }
 
-.navbar .quarto-navbar-tools .nav-link {
-  color: $slate !important;
+// `:empty` doesn't match here — Quarto's template leaves whitespace text
+// nodes inside this div even when it has no rendered content, and CSS
+// `:empty` counts whitespace text nodes as children. Check for element
+// children instead. `:has()`/`:not()` take the specificity of their
+// argument (here just `*`, contributing 0), not a flat pseudo-class, so the
+// selector has to repeat Quarto's own `.quarto-title-block.default`
+// qualifiers to outrank its compiled `.quarto-title-meta{display:grid}` rule.
+main.content #title-block-header.quarto-title-block.default .quarto-title-meta:not(:has(*)) { display: none; }
+
+main.content #title-block-header h1.title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--fs-page-title);
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0;
 }
 
-// ---- Homepage hero ------------------------------------------------------
+// An orienting sentence directly under a page title. Quarto renders front-matter
+// `subtitle:` as <p class="subtitle"> inside #title-block-header, so it inherits
+// the title block's grid placement (col 2) and sits above the rule for free.
+main.content #title-block-header .subtitle {
+  font-size: var(--fs-lead);
+  max-width: var(--measure);
+  color: var(--body);
+  margin: 0;
+}
+
+// ===========================================================================
+//  Footer
+// ===========================================================================
+.nav-footer {
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--muted);
+  font-size: var(--fs-sub);
+}
+.nav-footer a { color: var(--muted); }
+
+// ===========================================================================
+//  6.2 Hero (home only)
+// ===========================================================================
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.75rem;
-  margin-top: 3rem;
+  display: grid;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--rule);
 }
 
-.hero-role {
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: var(--col-meta) minmax(0, 1fr);
+    gap: 0 var(--gutter);
+  }
+}
+
+
+// Hero portrait — the ONE exception to §1's no-border-radius rule. A photograph
+// is not a UI surface, and the circular crop is the owner's explicit decision.
+// No border, no fill, no shadow: the radius alone. It leads the metadata column
+// rather than sitting beside the name, so the lead paragraph keeps its full
+// --measure; a right-hand portrait column would cut it to ~34 characters.
+.hero-portrait {
   display: block;
-  font-size: .8rem;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: $muted;
-  margin-bottom: 1rem;
-}
-
-.hero-name {
-  font-family: $headings-font-family;
-  font-weight: 500;
-  color: $ink;
-  font-size: clamp(2.8rem, 6vw, 3.6rem);
-  line-height: 1.02;
-  margin-bottom: 1.25rem;
-}
-
-.hero-photo {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
+  // Fixed at the metadata column's width so it stays a portrait at every size.
+  // A percentage width blows it up to the full container on mobile.
+  width: var(--col-meta);
+  aspect-ratio: 1;
   object-fit: cover;
-  flex: none;
+  border-radius: 50%;
 }
 
-.hero-social {
-  display: flex;
-  gap: .9rem;
-  align-items: center;
-  font-size: 1.3rem;
 
-  a {
-    color: $slate;
-    text-decoration: none !important;
-    &:hover { color: $slate-mid; }
-  }
-  .hero-social-text {
-    font-size: .9rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-}
-
-.hero-intro {
-  border-top: 1px solid $hairline;
-  margin: 2rem auto 0;
-  padding-top: 1.5rem;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  max-width: 640px;
-  text-align: center;
-  color: $body-text;
-}
-
-// ---- Research paper cards ----------------------------------------------
-.paper {
-  background: $card;
-  border: 1px solid $hairline;
-  border-radius: 8px;
-  padding: 1.5rem 1.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.paper-badge {
-  display: inline-block;
-  font-size: .72rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: $green;
-  background: $green-bg;
-  border-radius: 3px;
-  padding: .2rem .6rem;
-  margin-bottom: .6rem;
-}
-
-.paper h4 {
-  font-family: $headings-font-family;
+// Element-scoped (not bare `.hero-name`): Quarto's `--section-divs` pandoc
+// extension wraps a heading + the content that follows it (until the next
+// heading) into a `<section>`, and copies the heading's own classes onto
+// that wrapping section too — so a bare `.hero-name` class selector would
+// also match the section and leak this typography (and its margin) onto
+// the sibling `.hero-lead` paragraph nested inside it. Scoping to the `h1`
+// element keeps it on the heading alone.
+// Affiliation lines, directly under the name. Middot-separated rather than
+// stacked in the metadata column: with the portrait occupying that column, a
+// left-aligned text stack read as orphaned beneath it.
+.hero-affil {
+  display: grid;
+  gap: var(--sp-1);
+  font-family: var(--sans);
+  font-size: var(--fs-meta);
   font-weight: 500;
-  color: $ink;
-  margin: .2rem 0 .4rem;
-  font-size: 1.3rem;
+  letter-spacing: var(--track-meta);
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 var(--sp-3);
+  font-variant-numeric: tabular-nums;
 }
 
-.paper-authors {
-  color: $muted;
-  font-size: .95rem;
-  margin-bottom: .85rem;
+.hero-affil p { margin: 0; }
+
+h1.hero-name {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--fs-display);
+  line-height: 1.02;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  margin: 0 0 var(--sp-2);
 }
+
+.hero-lead {
+  font-size: var(--fs-lead);
+  max-width: var(--measure);
+  color: var(--body);
+  margin: 0;
+}
+
+.hero-lead { display: block; }
+
+// ===========================================================================
+//  6.3 Section head
+// ===========================================================================
+.sect {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: var(--sp-1);
+  margin: var(--sp-5) 0 0;
+}
+
+main.content h2 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--fs-section);
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.sect-tag {
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+// ===========================================================================
+//  6.4 Entry — publications, courses and engagements are all this
+// ===========================================================================
+.entry {
+  display: grid;
+  gap: var(--sp-1);
+  padding: var(--sp-3) 0;
+  border-bottom: 0;
+}
+
+// Only an entry followed by another entry gets the hairline. This is
+// order-based rather than :last-of-type, which behaves differently depending
+// on what sibling (a link row, a section) happens to follow the last entry.
+.entry:has(+ .entry) { border-bottom: 1px solid var(--rule); }
+
+@media (min-width: 720px) {
+  .entry {
+    grid-template-columns: var(--col-meta) minmax(0, 1fr);
+    gap: var(--sp-1) var(--gutter);
+  }
+  // Pandoc wraps each bracketed span on its own line in its own <p>, so the
+  // <p> — not the .entry-meta/.entry-title/.entry-sub span inside it — is the
+  // actual grid item. Without this, auto-placement scatters the subtitle and
+  // abstract into column 1 underneath the metadata. Pin explicitly instead.
+  .entry > p:has(.entry-meta) { grid-column: 1; grid-row: span 4; }
+  .entry > p:has(.entry-title),
+  .entry > p:has(.entry-sub),
+  .entry > .entry-links,
+  .entry > details.abstract { grid-column: 2; }
+}
+
+.entry-meta {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  letter-spacing: var(--track-meta);
+  text-transform: uppercase;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.6;
+  padding-top: var(--sp-1); // was a literal 0.4rem; nudges the meta column onto the title's cap-height, smaller than hero's --sp-2 because --fs-title is far smaller than --fs-display
+  margin: 0;
+}
+
+// The identifying line: journal, course code, or institution. 0.07em is a
+// documented exception (spec §4) to --track-meta — leave it literal.
+.entry-org {
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--navy);
+}
+
+.entry-title {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: var(--fs-title);
+  line-height: 1.32;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.entry-sub {
+  display: block;
+  font-size: var(--fs-sub);
+  line-height: 1.55;
+  color: var(--body);
+  margin: 0;
+}
+
+// Quarto wraps loose text in <p>; keep those from adding their own space.
+.entry p { margin: 0; }
+
+// ===========================================================================
+//  6.5 Link — not a button
+// ===========================================================================
+// Pandoc puts both link anchors in one shared <p> when they sit on the same
+// source line, so the flex declaration must reach that <p> too — otherwise
+// .entry-links has a single child and the gap has nothing to act between.
+.entry-links,
+.entry-links > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.entry-links { margin-top: var(--sp-2); }
+.entry-links > p { margin: 0; }
 
 .paper-link {
-  display: inline-block;
-  font-size: .82rem;
-  letter-spacing: .03em;
-  color: $slate;
-  border: 1px solid $hairline;
-  border-radius: 4px;
-  padding: .25rem .7rem;
-  margin: 0 .4rem .4rem 0;
-  text-decoration: none !important;
-
-  &:hover {
-    background: $slate;
-    color: $linen;
-    border-color: $slate;
-  }
-}
-
-.paper-abstract {
-  margin-top: .85rem;
-  font-size: .95rem;
-  line-height: 1.55;
-
-  summary {
-    cursor: pointer;
-    color: $muted;
-    font-size: .85rem;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-  p { margin-top: .6rem; color: $body-text; }
-}
-
-// Section headings on the research page
-.content h2 {
-  font-size: .85rem;
-  letter-spacing: .16em;
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
-  color: $muted;
-  border-bottom: 1px solid $hairline;
-  padding-bottom: .5rem;
-  margin-top: 2.5rem;
+  color: var(--navy);
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--navy-line);
+  padding-bottom: 1px;
 }
 
-// ---- Footer -------------------------------------------------------------
-.nav-footer {
-  border-top: 1px solid $hairline;
-  color: $muted;
-  font-size: .9rem;
+.paper-link:hover { border-bottom-color: var(--navy); }
+
+// ===========================================================================
+//  6.6 Abstract disclosure — native <details>
+// ===========================================================================
+details.abstract { margin-top: var(--sp-2); }
+
+details.abstract > summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  list-style: none;
 }
 
-// ---- Mobile -------------------------------------------------------------
-@media screen and (max-width: 767.98px) {
-  .hero {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 1.25rem;
-    margin-top: 1.5rem;
+details.abstract > summary::-webkit-details-marker { display: none; }
+details.abstract > summary::before { content: "+ "; }
+details.abstract[open] > summary::before { content: "– "; }
+details.abstract > summary:hover { color: var(--navy); }
+
+details.abstract p {
+  font-size: var(--fs-body);
+  max-width: var(--measure);
+  color: var(--body);
+  margin: var(--sp-2) 0 0;
+}
+
+// Body links inside prose, distinct from .paper-link
+main.content p a:not(.paper-link) {
+  color: var(--navy);
+  border-bottom: 1px solid var(--navy-line);
+}
+main.content p a:not(.paper-link):hover { border-bottom-color: var(--navy); }
+
+// Earlier teaching — a condensed index, deliberately subordinate to the current
+// courses above. Multi-column rather than grid: it balances any number of items,
+// so adding an eleventh course needs no CSS change.
+.past-teaching {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-3) 0 0;
+}
+
+.past-teaching li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: var(--fs-sub);
+  color: var(--body);
+  break-inside: avoid; // never split a row across the column break
+}
+
+.past-teaching li:last-child { border-bottom: 0; }
+
+.past-teaching span {
+  font-family: var(--sans);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  letter-spacing: var(--track-meta);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+// Blocks that belong to the content column but are not entries: they take the
+// same left edge as the page title and every entry title, so each page has one.
+@media (min-width: 720px) {
+  .past-teaching {
+    margin-left: var(--indent);
   }
-  .hero-name { font-size: clamp(2.4rem, 11vw, 3rem); }
+
+  // Multi-column balances however many rows exist across two columns without
+  // needing a hardcoded row count — the browser recalculates the split any
+  // time the list changes length.
+  .past-teaching {
+    columns: 2;
+    column-gap: var(--gutter);
+  }
+
+  // With multi-column, CSS truly cannot express "last item per column" — the
+  // browser decides where the break falls, and that decision can change with
+  // content or viewport. Keep the hairline on every row here rather than
+  // leave one column with a dangling rule and the other without one.
+  .past-teaching li:last-child { border-bottom: 1px solid var(--rule); }
+}
+
+// Home's exit links now follow the hero directly. Give them air, and place them
+// on the content column so they line up with the name above.
+.hero + .entry-links {
+  margin-top: var(--sp-5);
+}
+
+@media (min-width: 720px) {
+  .hero + .entry-links { margin-left: var(--indent); }
 }

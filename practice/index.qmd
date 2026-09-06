@@ -1,0 +1,85 @@
+---
+title: "Practice"
+subtitle: "Work for public bodies, asset owners and the profession."
+toc: false
+---
+
+::: {.sect}
+## Appointments & advisory
+
+[Selected]{.sect-tag}
+:::
+
+::: {.entry}
+[[Magma]{.entry-org}2026]{.entry-meta}
+
+[Subject editor — investments outside the stock exchange]{.entry-title}
+
+[Magma forskning og viten, volume 29, issue 2.]{.entry-sub}
+:::
+
+::: {.entry}
+[[Ministry of Finance]{.entry-org}2025]{.entry-meta}
+
+[Committee member, evaluation of the Government Pension Fund Global]{.entry-title}
+
+[Appointed to the committee assessing active management in Norway's sovereign wealth fund.]{.entry-sub}
+:::
+
+::: {.entry}
+[[KLP]{.entry-org}2024]{.entry-meta}
+
+[Consultant, report on the economic role of KLP]{.entry-title}
+:::
+
+::: {.entry}
+[[Norsk legemiddelforsikring]{.entry-org}2024]{.entry-meta}
+
+[Consultant, review of investment strategy]{.entry-title}
+:::
+
+::: {.entry}
+[[Pensjonskontoret]{.entry-org}2023]{.entry-meta}
+
+[Consultant, returns from asset management of public pensions]{.entry-title}
+:::
+
+::: {.entry}
+[[Ministry of Finance]{.entry-org}2022]{.entry-meta}
+
+[Code reviewer, evaluation of the Government Pension Fund Global]{.entry-title}
+:::
+
+::: {.sect}
+## Reports
+
+[Public & industry]{.sect-tag}
+:::
+
+::: {.entry}
+[[Government report]{.entry-org}December 2025]{.entry-meta}
+
+[Evaluating the Performance of Active Management in Norway's Sovereign Wealth Fund (GPFG)]{.entry-title}
+
+[with Trond Døskeland]{.entry-sub}
+
+::: {.entry-links}
+[SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5887182){.paper-link}
+:::
+
+<details class="abstract"><summary>Abstract</summary>
+<p>This report concludes that Norges Bank's active management of the Fund has created substantial value for the Norwegian people. Since 1998, active decisions have contributed about 611 billion NOK before costs, and 402 billion NOK after costs. This corresponds to average annual active returns of 0.27% before costs, and 0.19% after costs. In the most recent four year period, active management has continued to add value, with mean annual gross and net active returns of 0.24% and 0.20%. These results reflect very low management costs of about 0.04% per year.</p>
+</details>
+:::
+
+::: {.entry}
+[[Industry report]{.entry-org}November 2023]{.entry-meta}
+
+[Return on pension assets]{.entry-title}
+
+[with Andreas Ørpetveit]{.entry-sub}
+
+::: {.entry-links}
+[Publisher](https://www.pensjonskontoret.no/rapporter-mv/2023-nhh---avkastning-pa-pensjonsmidlene){.paper-link}
+:::
+:::
