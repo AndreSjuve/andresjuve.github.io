@@ -62,7 +62,7 @@ toc: false
 :::
 
 ::: {.entry}
-[[Under review]{.entry-org}Single authored]{.entry-meta}
+[[Revise and resubmit]{.entry-org}Journal of Empirical Finance]{.entry-meta}
 
 [Sustainable, But Not Price-Blind: Fee Sensitivity in ESG Mutual Fund Flows]{.entry-title}
 
